@@ -11,6 +11,7 @@ gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'russian'
 
+gem 'event-calendar', require: 'event_calendar'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -23,9 +24,15 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
+
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'capybara'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

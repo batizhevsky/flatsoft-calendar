@@ -11,3 +11,19 @@
  *= require_self
  *= require_tree .
  */
+.field_with_errors {
+  padding: 2px;
+  background-color: #FDDFDE;
+  border-color: #FBC7C6;
+  display: table;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 10px;
+  border-top: 1px solid #eaeaea;
+} 
+
+footer small {
+    float: left;
+}

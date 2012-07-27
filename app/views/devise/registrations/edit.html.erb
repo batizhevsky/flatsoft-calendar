@@ -1,0 +1,44 @@
+<h2><%= title("Профиль пользователя #{resource_name.to_s.humanize}") %></h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= devise_error_messages! %>
+  <fieldset>
+      <legend><%= title("Регистрация") %></legend>
+      <div class="control-group">
+        <%= f.label :email, class: "control-label" %> 
+        <div class="controls">
+         <%= f.email_field :email, class: "input-xlarge", required: true %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label :username, class: "control-label" %>
+        <div class="controls"><%= f.text_field :username, class: "input-xlarge" %></div>
+      </div>
+      <div class="control-group">
+        <%= f.label :password, class: "control-label", autocomplete: "off" %>
+        <div class="controls">
+          <%= f.password_field :password, class: "input-xlarge" %>
+          <p class="help-block"><i>(Оставьте пустым, если не хотите изменить)</i></p>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label :password_confirmation, class: "control-label" %>
+        <div class="controls">
+          <%= f.password_field :password_confirmation, class: "input-xlarge" %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label :current_password, class: "control-label" %>
+        <div class="controls">
+          <%= f.password_field :current_password, class: "input-xlarge" %>
+          <p class="help-block"><i>(Вам нужно ввести существующий пароль для подтверждения)</i></p>
+        </div>
+      </div>
+      <div><%= f.submit "Изменить", class: "btn btn-primary", id: "register" %></div>  
+    </fieldset>
+
+<h3>Удаление профиля</h3>
+
+<p><%= link_to "Удалить", registration_path(resource_name), :data => { :confirm => "Вы уверены?" }, :method => :delete %>.</p>
+
+<%= link_to "Back", :back %>

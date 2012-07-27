@@ -1,0 +1,21 @@
+<h2><%= title("Воити в систему") %></h2>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <fieldset>
+    <div class="control-group">
+      <%= f.label :email, class: "control-label" %> 
+      <div class="controls">
+        <%= f.email_field :email, class: "input-xlarge", required: true %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :password, class: "control-label" %>
+      <div class="controls">
+        <%= f.password_field :password, class: "input-xlarge" %>
+      </div>
+    </div>
+    <div><%= f.submit "Воити", class: "btn btn-primary", id: "login" %></div>
+  </fieldset>
+<% end %>
+
+<%= render "devise/shared/links" %>
