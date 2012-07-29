@@ -1,0 +1,6 @@
+<h2> <%= title("Редактировать событие") %> </h2>
+
+<%= render 'form' %>
+
+<%= link_to 'Удалить', event_path(@event), method: :delete, data: {confirm: "Вы уверены?"} %>
+<%= link_to 'Назад', calendar_path %>

@@ -1,0 +1,46 @@
+<%= form_for @event do |f| %>
+  <%= render 'layouts/error', object: f.object %>
+  <div class="control-group">
+    <%= f.label :name, class: "control-label" %> 
+    <div class="controls">
+      <%= f.text_field :name, class: "input-xlarge", required: true %>
+    </div>
+  </div>
+    <div class="control-group">
+    <%= f.label :start_at, class: "control-label" %> 
+    <div class="controls">
+      <%= f.text_field :start_at, class: "input-xlarge", required: true %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :end_at, class: "control-label" %> 
+    <div class="controls">
+      <%= f.text_field :end_at, class: "input-xlarge", required: true %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :user, "Доступно:", class: "control-label" %> 
+    <div class="controls">
+      <label class="radio">
+        <%= f.radio_button(:user, 'current', checked: for_user?(@event) ) %>
+        <%= f.label(:user_current, current_name) %>
+      </label>
+      <label class="radio">
+        <%= f.radio_button(:user, 'any', checked: !for_user?(@event) ) %>
+        <%= f.label(:user_any, 'Всем') %>
+      </label>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :repeat, "Повторять", class: "control-label" %>
+    <div class="controls">
+      <label class="radio">
+       
+      </label>
+      <label class="radio">
+
+      </label>
+    </div>
+  <div><%= f.submit "Сохранить", class: "btn btn-primary", id: "create" %></div>  
+
+<% end %>

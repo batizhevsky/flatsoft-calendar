@@ -6,5 +6,10 @@ ru:
         password: Пароль
         password_confirmation: Подтверждение пароля
         username: Имя пользователя
+      event:
+        name: Событие
+        start_at: Начало события 
+        end_at: Окончание события
     models:
       user: Пользователь
+      events: Событие
