@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(:version => 20120729203119) do
     t.datetime "start_at"
     t.datetime "end_at"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.integer  "repeat"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.integer  "repeat",     :default => 0, :null => false
   end
 
   create_table "users", :force => true do |t|

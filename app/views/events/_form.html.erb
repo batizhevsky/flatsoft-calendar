@@ -35,10 +35,20 @@
     <%= f.label :repeat, "Повторять", class: "control-label" %>
     <div class="controls">
       <label class="radio">
-       
+        <%= f.radio_button(:repeat, 'day', checked: @event.repeat == EventHelper::DAY) %>
+        <%= f.label(:repeat_day, 'Каждый день') %>
       </label>
       <label class="radio">
-
+        <%= f.radio_button(:repeat, 'week', checked: @event.repeat == EventHelper::WEEK) %>
+        <%= f.label(:repeat_week, 'Каждую неделю') %>
+      </label>
+      <label class="radio">
+        <%= f.radio_button(:repeat, 'month', checked: @event.repeat == EventHelper::MONTH) %>
+        <%= f.label(:repeat_month, 'Каждый месяц') %>
+      </label>
+      <label class="radio">
+        <%= f.radio_button(:repeat, 'year', checked: @event.repeat == EventHelper::YEAR) %>
+        <%= f.label(:repeat_year, 'Каждый год') %>
       </label>
     </div>
   <div><%= f.submit "Сохранить", class: "btn btn-primary", id: "create" %></div>  

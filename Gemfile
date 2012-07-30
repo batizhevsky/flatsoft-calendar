@@ -11,7 +11,7 @@ gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'russian'
 
-gem 'event-calendar', require: 'event_calendar'
+gem 'event-calendar', require: 'event_calendar', git: 'git://github.com/leonko/event_calendar.git'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -27,6 +27,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'debugger'
 end
 
 group :test do
