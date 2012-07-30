@@ -4,8 +4,6 @@ gem 'rails', '3.2.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'pg'
-
 
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
@@ -30,6 +28,10 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'debugger'
   gem 'sqlite3'
+end
+
+group :production do
+   gem 'pg'
 end
 
 group :test do
