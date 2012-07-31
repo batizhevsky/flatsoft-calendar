@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/leonko/event_calendar.git
-  revision: 72c2fcc4b2a3d38bf263d8aef97e67bffd2b2757
+  revision: 79c013f857d7959b328258d0b24c6075ac292311
   specs:
     event-calendar (2.3.3)
 
